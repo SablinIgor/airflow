@@ -14,7 +14,7 @@ default_args = {
 
 def fetch_from_source():
     logging.info('Data Fetching...')
-    hook = PostgresHook(postgres_conn_id="POSTGRESQL_SOURCEERRRRR")
+    hook = PostgresHook(postgres_conn_id="postgresql_source")
     conn = hook.get_conn()
     cursor = conn.cursor()
     cursor.execute("select 1")
